@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./resources/jquery.min.js"></script>
+    <!-- jquery -->
+    <script>
+        if (typeof jQuery === "undefined"){
+            console.log("local jQuery failed to load")
+            document.write('<script src="https://code.jquery.com/jquery-3.6.0.min.js"><\/script>')
+        } else{
+            console.log("local jquery loaded succesfully")
+        }
+    </script>
+    
+    <script>
+
+        $(document).ready(function(){
+
+            $("input").click(function(){
+                $("input").hide()
+            })
+            $("p").hover(function(){
+                $("p").css("color","green")
+            })
+            $("img").dblclick(function(){
+                $("img").css("filter","grayscale(100%)")
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+    <h1>Using jQuery selectors and events.</h1>
+
+    <input type="button" name="" id="">
+    <p>sample text</p>
+    <img src="./media/pokeball.png" alt="">
+
+    <dl>
+        <dt>Click</dt>
+        <dd>This selector activates when you click the element with your mouse</dd>
+
+        <dt>Hover</dt>
+        <dd>This selector activates once you move your mouse over the element</dd>
+
+        <dt>Dbclick</dt>
+        <dd>This selector activates when you click the element two times in rapid succession</dd>
+    </dl>
+</body>
+</html>
